@@ -1,21 +1,13 @@
 //Use this file to implement Part One of your project
-
+/*
 var animal = {};
 
 animal.username = "Pickles";
 
-//console.log(animal.username);
+
 
 animal["tagline"] = "I love muffins!";
-//console.log(animal["tagline"]);
 
-/*var noises = [];
-animal[noises] = noises;
-//console.log(animal);
-
-  for(var key in animal) {
-	
-}*/
 
 var noiseArray = ["purr", "oink"];
 
@@ -40,7 +32,7 @@ for (var key in animal) {
         console.log("I like to say " + animal[key]);
     }
 }*/
-
+/*
 animal.noises = noiseArray;
 
 var animals = [];
@@ -70,5 +62,14 @@ animals[animals.length] = dog;
 animals[animals.length] = ferret;
 
 console.log(animals.length);
+*/
 
-console.log(animals);
+
+
+function Animalmaker(name) {
+	return {
+		speak: function () {
+			console.log("my name is", name);
+		}
+	};
+};
