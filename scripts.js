@@ -65,7 +65,7 @@ animals[animals.length] = ferret;
 var AnimalMaker = function(name) {
     return {
         speak: function() {
-            console.log('My nanme is', name);
+            console.log('My name is', name);
         },
         name: name,
         owner: 'George'
@@ -81,7 +81,24 @@ for(var i = 0; i < animalNames.length; i++) {
 	var animal = AnimalMaker(animalNames[i]);
 	farm.push(animal);
 }
-
+/*
 for(var i = 0; i < farm.length; i++) {
 	farm[i].speak();
 }
+*/
+
+var AnimalTestUser = function(username) {
+	var args = arguments.length;
+	var otherArgs = [];
+	if (args > 1) {
+		for(var i = 1; i < args; i++) {
+			otherArgs.push(arguments[i]);
+		}
+	}
+	return {
+		username: username,
+		otherArgs: otherArgs
+	};
+};
+
+
