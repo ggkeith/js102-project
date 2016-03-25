@@ -22,7 +22,7 @@ var noises = [];
 animal.noises = noises;
 
 
-
+/*
 var count = 0;
 for (var key in animal) {
     count++;
@@ -31,7 +31,7 @@ for (var key in animal) {
     } else if (key === "tagline") {
         console.log("I like to say " + animal[key]);
     }
-}
+}*/
 
 animal.noises = noiseArray;
 
@@ -62,10 +62,7 @@ animals[animals.length] = dog;
 animals[animals.length] = ferret;
 
 
-console.log(animals.length);
-
-
-function AnimalMaker(name) {
+var AnimalMaker = function(name) {
     return {
         speak: function() {
             console.log('My nanme is', name);
@@ -79,3 +76,12 @@ function AnimalMaker(name) {
 var animalNames = ['Lollipop', 'Desi', 'Paris'];
 
 var farm = [];
+
+for(var i = 0; i < animalNames.length; i++) {
+	var animal = AnimalMaker(animalNames[i]);
+	farm.push(animal);
+}
+
+for(var i = 0; i < farm.length; i++) {
+	farm[i].speak();
+}
