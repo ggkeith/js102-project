@@ -61,6 +61,7 @@ var ferret = {
 animals[animals.length] = dog;
 animals[animals.length] = ferret;
 
+<<<<<<< HEAD
 console.log(animals.length);
 */
 
@@ -73,3 +74,19 @@ function Animalmaker(name) {
 		}
 	};
 };
+=======
+function AnimalMaker(name) {
+    return {
+        speak: function() {
+            console.log('My nanme is', name);
+        },
+        name: name,
+        owner: 'George'
+        
+    };
+}; 
+
+var animalNames = ['Lollipop', 'Desi', 'Paris'];
+
+var farm = [];
+>>>>>>> 2488389a2247bc44a16df1db12495f57d4223caf
