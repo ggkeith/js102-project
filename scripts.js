@@ -42,7 +42,8 @@ animals.push(animal);
 var quackers = {
 	username: "Daffy Duck",
 	tagline: "Yipeee!",
-	noises : ["quack", "honk", "sneeze", "growl"]
+	noises : ["quack", "honk", "sneeze", "growl"],
+    friends: []
 }
 
 animals[animals.length] = quackers;
@@ -50,13 +51,15 @@ animals[animals.length] = quackers;
 var dog = {
 	username: "Desi",
 	tagline: "I bark, therefore I am",
-	noises: ["ruff", "squeal", "ribbit"]
+	noises: ["ruff", "squeal", "ribbit"],
+    friends: []
 }
 
 var ferret = {
 	username: "Zoltan",
 	tagline: "I steal shit",
-	noise: ["sqeak", "chirp", "nomnomnom"]
+	noise: ["sqeak", "chirp", "nomnomnom"],
+    friends: []
 }
 animals[animals.length] = dog;
 animals[animals.length] = ferret;
@@ -115,7 +118,16 @@ var AnimalCreator = function(username, species, tagline, noises) {
     return animal;
 };
 
+var sheep = AnimalCreator('sheepie', 'sheep', 'You can count on me!', ['whinny', 'chomp', 'shear!']);
+var duck = AnimalCreator('stan', 'duck', 'My ass is watertight.', ['quack', 'ruffle']);
+var 
 
 var addFriend = function(animal, friend) {
     animal.friends.push(friend.username);
 };
+
+var newFriends = addFriend(sheep, duck);
+
+var myFarm = [];
+
+
