@@ -101,4 +101,20 @@ var AnimalTestUser = function(username) {
 	};
 };
 
+var testCow = AnimalTestUser('Donald');
+console.log(testCow.username.length);
 
+var AnimalCreator = function(username, species, tagline, noises) {
+    return {
+        username: username,
+        species: species,
+        tagline: tagline,
+        noises : noises,
+        friends: []
+    };
+};
+
+
+var addFriend = function(animal, friend) {
+
+}
