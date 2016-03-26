@@ -105,16 +105,17 @@ var testCow = AnimalTestUser('Donald');
 console.log(testCow.username.length);
 
 var AnimalCreator = function(username, species, tagline, noises) {
-    return {
-        username: username,
-        species: species,
-        tagline: tagline,
-        noises : noises,
-        friends: []
+    var animal = {
+        'username': username,
+        'species': species,
+        'tagline': tagline,
+        'noises' : noises,
+        'friends': []
     };
+    return animal;
 };
 
 
 var addFriend = function(animal, friend) {
-
+    animal.friends.push(friend.username);
 }
