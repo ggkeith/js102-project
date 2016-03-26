@@ -118,4 +118,4 @@ var AnimalCreator = function(username, species, tagline, noises) {
 
 var addFriend = function(animal, friend) {
     animal.friends.push(friend.username);
-}
+};
