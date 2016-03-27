@@ -4,19 +4,13 @@ var animal = {};
 
 animal.username = "Pickles";
 
-
-
 animal["tagline"] = "I love muffins!";
-
 
 var noiseArray = ["purr", "oink"];
 
 noiseArray.unshift("fart");
 noiseArray.push("peep");
 noiseArray[3] = "meow";
-
-
-animal["tagline"] = "I love muffins!";
 
 var noises = [];
 animal.noises = noises;
@@ -155,4 +149,23 @@ giveMatches(myFarm);
 console.log(myFarm);
 
 // Nesting Exercies 
-var friendUsernames = [];
+var friends = [];
+
+friends.push(animals[0].username, animals[1].username);
+
+console.log(friends);
+
+var relationships = {};
+relationships.friends = friends;
+
+console.log(relationships);
+console.log(Object.keys(relationships).length);
+
+var matches = [];
+relationships.matches = matches;
+relationships.matches.push('sheep');
+console.log(relationships);
+
+for(var i = 0; i < animals.length; i++) {
+    animals[i].relationships = relationships;
+}
