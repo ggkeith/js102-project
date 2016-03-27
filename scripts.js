@@ -105,7 +105,7 @@ var AnimalTestUser = function(username) {
 };
 
 var testCow = AnimalTestUser('Donald');
-console.log(testCow.username.length);
+//console.log(testCow.username.length);
 
 var AnimalCreator = function(username, species, tagline, noises) {
     var animal = {
@@ -120,14 +120,39 @@ var AnimalCreator = function(username, species, tagline, noises) {
 
 var sheep = AnimalCreator('sheepie', 'sheep', 'You can count on me!', ['whinny', 'chomp', 'shear!']);
 var duck = AnimalCreator('stan', 'duck', 'My ass is watertight.', ['quack', 'ruffle']);
-var 
 
 var addFriend = function(animal, friend) {
     animal.friends.push(friend.username);
 };
 
-var newFriends = addFriend(sheep, duck);
 
-var myFarm = [];
+// question 6
+var myFarm = [sheep, duck, ferret, dog];
 
+addFriend(sheep, ferret);
+addFriend(duck, dog);
+addFriend(ferret, duck);
+addFriend(dog, sheep);
 
+// question 7
+var addMatchesArray = function(farm) {
+    for(var i in farm){
+        farm[i].matches = [];
+    };
+};
+
+addMatchesArray(myFarm);
+//console.log(myFarm);
+
+// question 8
+var giveMatches = function(farm) {
+    for(var x in farm) {
+       farm[x].matches.push(farm[x].friends[0]); 
+    };
+};
+
+giveMatches(myFarm);
+console.log(myFarm);
+
+// Nesting Exercies 
+var friendUsernames = [];
